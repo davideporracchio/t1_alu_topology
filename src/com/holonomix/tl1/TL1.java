@@ -223,6 +223,7 @@ public class TL1 implements TopologyAdapterInterface {
 				}
 			}
 
+			
 			tpe.shutdown();
 			tpe.awaitTermination(1000, TimeUnit.MILLISECONDS);
 
@@ -231,6 +232,7 @@ public class TL1 implements TopologyAdapterInterface {
 	}
 
 	private void runFutureTaskDevice(List<Device> deviceToExecute,
+			
 			ThreadPoolExecutor tpe, FutureTask<Ipam>[] tasks,
 			Map<Integer, Device> taskDevice) {
 		for (int j = 0; j < tasks.length; j++)
